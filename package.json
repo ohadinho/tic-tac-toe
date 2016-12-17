@@ -1,7 +1,7 @@
 {
-  "name": "angular-quickstart",
+  "name": "tic-tac-toe",
   "version": "1.0.0",
-  "description": "QuickStart package.json from the documentation, supplemented with testing support",
+  "description": "Tic-Tac-Toe game - uses Angular2.JS, HTML5, CSS3",
   "scripts": {
     "start": "tsc && concurrently \"tsc -w\" \"lite-server\" ",
     "e2e": "tsc && concurrently \"http-server -s\" \"protractor protractor.config.js\" --kill-others --success first",
