@@ -1,0 +1,17 @@
+.panel {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.digit {
+  width:20%; height:70px;
+  border:1px solid black;
+  overflow:hidden;
+  text-align:center;
+  line-height:70px;
+  font-size:24px;
+  display:inline-block;
+  padding-top:10px;
+  margin-top: -5px;
+  margin-left: -5px;
+}

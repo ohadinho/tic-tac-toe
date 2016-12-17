@@ -1,0 +1,14 @@
+<div>
+    <form (ngSubmit)="onSubmit()">
+        <div>
+            <label for="Player X">Player X</label>
+            <input type="text" id="playerX" required [(ngModel)]="players[0].id" name="playerXid">
+        </div>
+        <div>
+            <label for="Player O">Player O</label>
+            <input type="text" id="playerO" required [(ngModel)]="players[1].id" name="playerOid">
+        </div>
+
+        <button type="submit" class="btn btn-default">Submit</button>
+    </form>
+</div>

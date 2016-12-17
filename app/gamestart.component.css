@@ -1,0 +1,8 @@
+div > form {
+    text-align: center;
+}
+
+div > form > div {
+    margin-top: 2em;
+    margin-bottom: 1em;
+}
