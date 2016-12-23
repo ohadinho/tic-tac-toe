@@ -1,10 +1,10 @@
 import { NgModule }             from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { GamePanelComponent }   from './gamepanel.component';
-import { GameStartComponent }   from './gamestart.component';
-import { MainMenuComponent }   from './mainmenu.component';
-import { LeaderBoardComponent }   from './leaderboard.component';
+import { GamePanelComponent } from '../../components/gamepanel/gamepanel.component';
+import { GameStartComponent } from '../../components/gamestart/gamestart.component';
+import { MainMenuComponent } from '../../components/mainmenu/mainmenu.component';
+import { LeaderBoardComponent } from '../../components/leaderboard/leaderboard.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/mainmenu', pathMatch: 'full' },

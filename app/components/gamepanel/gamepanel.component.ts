@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Game } from './game';
-import { Player } from './player';
+import { Game } from '../../models/game/game';
+import { Player } from '../../models/player/player';
 
-import { PlayersService } from './players.service';
-import { LeaderBoardService } from './leaderboard.service';
+import { PlayersService } from '../../services/players/players.service';
+import { LeaderBoardService } from '../../services/leaderboard/leaderboard.service';
 
 @Component({
   moduleId: module.id,

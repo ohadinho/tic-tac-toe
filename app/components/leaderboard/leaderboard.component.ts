@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Leader } from './leader';
+import { Leader } from '../../models/leader/leader';
 
-import { LeaderBoardService } from './leaderboard.service';
+import { LeaderBoardService } from '../../services/leaderboard/leaderboard.service';
 
 @Component({
   moduleId: module.id,

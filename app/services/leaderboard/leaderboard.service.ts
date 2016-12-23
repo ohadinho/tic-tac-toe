@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 
-import { Leader } from './leader';
+import { Leader } from '../../models/leader/leader';
 
 @Injectable()
 export class LeaderBoardService {
