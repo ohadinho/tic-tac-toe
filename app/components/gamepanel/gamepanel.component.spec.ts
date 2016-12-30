@@ -73,4 +73,8 @@ describe('GamePanelComponent (inline template)', () => {
       expect(span.textContent).toContain(comp.game.CurrentSign);              
   });
 
+  it('switchTurn', () => {
+    // TODO: implement
+  });
+
 });
