@@ -47,12 +47,12 @@ describe('GamePanelComponent (inline template)', () => {
 
       // Valid move
       comp.game.board[0][0] = ' ';      
-      isValid = comp.isValidMove(0,0);
+      let isValid = comp.isValidMove(0,0);
       expect(isValid).toBe(true);
 
       // Non-valid move
       comp.game.board[0][0] = 'X';      
-      let isValid = comp.isValidMove(0,0);
+      isValid = comp.isValidMove(0,0);
       expect(isValid).toBe(false);
   });
 
@@ -74,7 +74,17 @@ describe('GamePanelComponent (inline template)', () => {
   });
 
   it('switchTurn', () => {
-    // TODO: implement
+      fixture.detectChanges();
+      let turnNumberAfterSwitch = comp.game.currentTurn == 1 ? 0 : 1;
+
+      comp.switchTurn();
+      expect(comp.game.currentTurn).toBe(turnNumberAfterSwitch);
+
+      fixture.detectChanges();
+      let outputMessageShouldContain = comp.game.CurrentSign + ' Turn';
+      de = fixture.debugElement.query(By.css('.outputMessageClass'));
+      const div = de.nativeElement;          
+      expect(div.textContent).toContain(outputMessageShouldContain);
   });
 
 });
