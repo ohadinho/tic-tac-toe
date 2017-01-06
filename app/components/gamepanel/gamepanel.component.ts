@@ -16,17 +16,12 @@ import { LeaderBoardService } from '../../services/leaderboard/leaderboard.servi
 export class GamePanelComponent implements OnInit {
   game: Game;
   outputMessage: string;
+  readonly emptyCellSign = " ";   
 
   constructor(private playerService: PlayersService, private leaderBoardService: LeaderBoardService) { }
 
   initGame(): void {
- // this.game = {
- //     board : [[' ',' ',' '],[' ',' ',' '],[' ',' ',' ']],
- //     signs : ['X', 'O'],
- //     gameOver : false,
- //     currentTurn : 0
- //   }
-    let initialBoard = [[' ',' ',' '],[' ',' ',' '],[' ',' ',' ']];
+    let initialBoard = [[this.emptyCellSign,this.emptyCellSign,this.emptyCellSign],[this.emptyCellSign,this.emptyCellSign,this.emptyCellSign],[this.emptyCellSign,this.emptyCellSign,this.emptyCellSign]];
     let initialPlayers = this.playerService.getPlayers();
     let initialGameOver = false;
     let initialCurrentTurn = 0;

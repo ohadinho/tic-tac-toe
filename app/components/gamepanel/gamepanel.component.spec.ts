@@ -87,4 +87,58 @@ describe('GamePanelComponent (inline template)', () => {
       expect(div.textContent).toContain(outputMessageShouldContain);
   });
 
+  it('isBoardFull - True', () => {
+      fixture.detectChanges();
+      fullBoardTopRowWin('X','O');
+      let isBoardFull = comp.isBoardFull();
+      expect(isBoardFull).toBe(true);
+  });
+
+  it('isBoardFull - False', () => {
+      fixture.detectChanges();
+      middleRowWin('X','O');
+      let isBoardFull = comp.isBoardFull();
+      expect(isBoardFull).toBe(false);
+  });
+
+  it('checkRowWin - Top row win', () => {
+      fixture.detectChanges();
+      fullBoardTopRowWin('X','O');
+      let isTopRowWin = comp.checkRowWin(0);
+      expect(isTopRowWin).toBe(true);
+  });
+
+  it('checkRowWin - Middle row win', () => {
+      fixture.detectChanges();
+      middleRowWin('X','O');
+      let isMiddleRowWin = comp.checkRowWin(1);
+      expect(isMiddleRowWin).toBe(true);
+  });
+
+  // X X X
+  // O O X
+  // O X O
+  function fullBoardTopRowWin(winSign : string, loseSign : string ) {
+      comp.game.board[0][0] = winSign;
+      comp.game.board[0][1] = winSign;
+      comp.game.board[0][2] = winSign;
+      comp.game.board[1][0] = loseSign;
+      comp.game.board[1][1] = loseSign;
+      comp.game.board[1][2] = winSign;
+      comp.game.board[2][0] = loseSign;
+      comp.game.board[2][1] = winSign;
+      comp.game.board[2][2] = loseSign;
+  }
+
+  // O O 
+  // X X X
+  // 
+  function middleRowWin(winSign : string, loseSign : string ) {
+      comp.game.board[0][0] = loseSign;
+      comp.game.board[0][1] = loseSign;
+      comp.game.board[1][0] = winSign;
+      comp.game.board[1][1] = winSign;
+      comp.game.board[1][2] = winSign;
+  }
+
 });
