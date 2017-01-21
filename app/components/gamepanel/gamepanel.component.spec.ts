@@ -17,7 +17,6 @@ describe('GamePanelComponent (inline template)', () => {
   let fixture: ComponentFixture<GamePanelComponent>;  
   let playersService : PlayersService;
   let playersServiceStub : PlayersService;
-  let componentPlayersService : PlayersService;
 
   beforeEach( async ( () => {
 
@@ -36,7 +35,6 @@ describe('GamePanelComponent (inline template)', () => {
 
             // PlayerService actually injected into the component
             playersService = fixture.debugElement.injector.get(PlayersService);
-            componentPlayersService = playersService;
             // PlayersService from the root injector
             playersService = TestBed.get(PlayersService);
         });
@@ -46,7 +44,7 @@ describe('GamePanelComponent (inline template)', () => {
       comp.ngOnInit();
 
       // Valid move
-      comp.game.board[0][0] = ' ';      
+      comp.game.board[0][0] = comp.emptyCellSign;      
       let isValid = comp.isValidMove(0,0);
       expect(isValid).toBe(true);
 

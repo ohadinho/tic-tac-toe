@@ -25,7 +25,15 @@ export class GameStartComponent implements OnInit {
     }
 
     onSubmit() {
+        this.setServicePlayers();
+        this.navigateToGamePanel();        
+    }
+
+    setServicePlayers() {
         this.playerService.setPlayers(this.players);
-        this.router.navigate(['/gamepanel']);
+    }
+
+    navigateToGamePanel() {
+        this.router.navigateByUrl('/gamepanel');
     }
 }
