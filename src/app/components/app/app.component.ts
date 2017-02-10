@@ -5,9 +5,9 @@ import { Component } from '@angular/core';
   selector: 'my-app',
   template: `<h1>{{title}}</h1>
              <nav>
-                 <a routerLink="/mainmenu" routerLinkActive="active">Main menu</a>
-                 <a routerLink="/gamestart" routerLinkActive="active">New Game</a>
-                 <a routerLink="/leaderboard" routerLinkActive="active">Leader board</a>
+                 <approutelink [title]="'Main Menu'" [routerLink]="'/mainmenu'"></approutelink>
+                 <approutelink [title]="'New Game'" [routerLink]="'/gamestart'"></approutelink>                 
+                 <approutelink [title]="'Leader board'" [routerLink]="'/leaderboard'"></approutelink>
              </nav>
              <router-outlet></router-outlet>`,             
   styleUrls: [ 'app.component.css' ],

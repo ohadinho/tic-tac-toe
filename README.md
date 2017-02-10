@@ -20,3 +20,15 @@
 
 
 * Jasmine
+
+####### Testing techniques and practices used:
+
+* Set, Get and test an element content (gamepanel.component.spec.ts => setCellSign)
+
+* Inject a service & using a service stub (gamepanel.component.spec.ts)
+
+* Test component navigation by injecting an application router & using router stub (gamestart.component.spec.ts)
+
+* Test if a component method was executed (gamestart.component.spec.ts)
+
+* Test binding (gamestart.component.spec.ts => Test input <-> player bindings)

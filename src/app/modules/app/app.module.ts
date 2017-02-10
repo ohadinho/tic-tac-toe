@@ -8,6 +8,7 @@ import { GamePanelOutputComponent } from '../../components/gamepaneloutput/gamep
 import { MainMenuComponent } from '../../components/mainmenu/mainmenu.component';
 import { GameStartComponent } from '../../components/gamestart/gamestart.component';
 import { LeaderBoardComponent } from '../../components/leaderboard/leaderboard.component';
+import { AppRouteLinkComponent } from '../../components/approutelink/approutelink.component';
 
 import { PlayersService } from '../../services/players/players.service';
 import { LeaderBoardService } from '../../services/leaderboard/leaderboard.service';
@@ -23,7 +24,8 @@ import { AppRoutingModule }     from '../../modules/app-routing/app-routing.modu
                  GamePanelOutputComponent,
                  MainMenuComponent,
                  GameStartComponent,
-                 LeaderBoardComponent ],
+                 LeaderBoardComponent,
+                 AppRouteLinkComponent ],
   providers: [ PlayersService,
                LeaderBoardService ],
   bootstrap:    [ AppComponent ]

@@ -6,6 +6,7 @@ import { GamePanelComponent } from './gamepanel.component';
 import { GamePanelOutputComponent } from '../gamepaneloutput/gamepaneloutput.component';
 
 import { PlayersService } from '../../services/players/players.service';
+import { FakePlayersService } from '../../services/players/testing/fake-players.service';
 import { LeaderBoardService } from '../../services/leaderboard/leaderboard.service';
 
 import { Player } from '../../models/player/player';
@@ -16,14 +17,11 @@ describe('GamePanelComponent (inline template)', () => {
   let de: DebugElement;
   let fixture: ComponentFixture<GamePanelComponent>;  
   let playersService : PlayersService;
-  let playersServiceStub : PlayersService;
+  let playersServiceStub : FakePlayersService;
 
   beforeEach( async ( () => {
 
-    playersServiceStub = new PlayersService();
-    playersServiceStub.players = [];
-    playersServiceStub.players[0] = new Player('','X');
-    playersServiceStub.players[1] = new Player('','O');
+    playersServiceStub = new FakePlayersService();
 
     TestBed.configureTestingModule({
       declarations: [ GamePanelComponent, GamePanelOutputComponent ], // declare the test component

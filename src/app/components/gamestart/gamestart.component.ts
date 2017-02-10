@@ -22,6 +22,9 @@ export class GameStartComponent implements OnInit {
         this.players = [];
         this.players[0] = new Player('','X');
         this.players[1] = new Player('','O');
+        
+        // TO ERASE
+        //this.onSubmit();
     }
 
     onSubmit() {
