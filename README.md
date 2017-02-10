@@ -11,9 +11,9 @@
         
 * Router
         
-* Service
+* Service (leaderboard.service.ts, players.service.ts)
         
-* Forms
+* Animation (approutelink.component.ts)
 
 
 ##### Tested components with:
