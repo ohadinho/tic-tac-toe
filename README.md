@@ -21,7 +21,7 @@
 
 * Jasmine
 
-####### Testing techniques and practices used:
+##### Testing techniques and practices used:
 
 * Set, Get and test an element content (gamepanel.component.spec.ts => setCellSign)
 
