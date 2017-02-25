@@ -3,15 +3,27 @@
   text-align: center;
 }
 
-.digit {
+.cell {
   width:20%; height:70px;
   border:1px solid black;
   overflow:hidden;
   text-align:center;
   line-height:70px;
-  font-size:24px;
   display:inline-block;
+}
+
+.digit {
+  font-size:40px;
+  color: black;
   padding-top:10px;
   margin-top: -5px;
   margin-left: -5px;
+  animation: blink 1s 1;
+}
+
+@keyframes blink {
+  0% {
+    color: red;
+    font-size: 80px;
+  }
 }

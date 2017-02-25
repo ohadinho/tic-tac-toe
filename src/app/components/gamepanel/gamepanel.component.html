@@ -1,7 +1,7 @@
 <div *ngIf="game" class="panel">
       <div *ngFor="let row of game.board; let rowIndex = index">
         <span *ngFor="let column of row; let columnIndex = index">
-          <span [attr.id]="'cell' + rowIndex + columnIndex" class="digit" (click)="cellClick(rowIndex,columnIndex)">{{column}}</span>
+          <span [attr.id]="'cell' + rowIndex + columnIndex" class="cell digit" (click)="cellClick(rowIndex,columnIndex)">{{column}}</span>
         </span>        
       </div>
       <my-game-panel-output [message]="outputMessage"></my-game-panel-output>     
